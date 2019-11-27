@@ -9,8 +9,8 @@ let s3 = new aws.S3({
 
 console.log(s3.config.TOKEN);
 const food = require('./food.js');
-const config = require('./conf/config.js');
-const token = s3.config.TOKEN || config.token;
+// const config = require('./conf/config.js');
+const token = s3.config.TOKEN;
 
 
 bot.on('message', message => {
