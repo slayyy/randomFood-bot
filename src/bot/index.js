@@ -2,13 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const food = require('./food.js');
 
-const aws = require('aws-sdk');
-
-let s3 = new aws.S3({
-  TOKEN: process.env.TOKEN,
-});
-
-const token = s3.config.TOKEN;
+const token = process.env.TOKEN;
 
 
 
