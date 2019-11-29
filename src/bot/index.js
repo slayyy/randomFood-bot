@@ -20,7 +20,7 @@ bot.on('ready', () => {
 
 bot.on('message', message => { 
   var d = new Date();
-  if(message.content.toLowerCase() == 'break') {  
+  if(message.content.toLowerCase() == 'break') {
     if(d.getDay() === 0 || d.getDay() === 6){
       message.channel.sendMessage("Non, mais c'est le weekend :partying_face:")
     }else{
@@ -30,6 +30,6 @@ bot.on('message', message => {
       else{
         message.channel.sendMessage("non :cry:")
       }
+    }
   }
-  }
-  })
+})
