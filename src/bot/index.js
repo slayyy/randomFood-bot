@@ -13,10 +13,7 @@ bot.on('message', message => {
   }
 })
 
-bot.on('ready', () => {
-  bot.user.setPresence({game: 'WATCHING', {name: 'Random meal for you (:'}})
-})
-
+client.on("ready", () => { client.user.setPresence({ game: { name: 'Random meal for you (:',type: 'WATCHING'} }) })
 
 bot.on('message', message => { 
   var d = new Date();
