@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   food: () => {
     bot.on('message', message => {
       if (message.content.toLowerCase() == 'food') {
