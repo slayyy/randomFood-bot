@@ -6,6 +6,8 @@ const token = process.env.TOKEN;
 
 bot.login(token);
 
+bot.on("ready", () => { bot.user.setPresence({ game: { name: 'Random meal for you (:',type: 'WATCHING'} }) })
+
 bot.on('message', message => {
   if(message.content.toLowerCase() == 'food') {
     const rand = Math.floor(Math.random() * food.length);
@@ -13,7 +15,6 @@ bot.on('message', message => {
   }
 })
 
-client.on("ready", () => { client.user.setPresence({ game: { name: 'Random meal for you (:',type: 'WATCHING'} }) })
 
 bot.on('message', message => { 
   var d = new Date();
