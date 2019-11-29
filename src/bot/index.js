@@ -16,6 +16,6 @@ bot.on("ready", () => {
   })
 })
 
-words.food();
-words.break();
+words.food;
+words.break;
 
