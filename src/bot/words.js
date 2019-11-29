@@ -1,14 +1,21 @@
-export default {
-  food: () => {
+module.exports = {
+  food: (bot, food, foodEmbed) => {
     bot.on('message', message => {
       if (message.content.toLowerCase() == 'food') {
         const rand = Math.floor(Math.random() * food.length);
-        message.channel.sendMessage(`${food[rand].name} => ${food[rand].price} €`)
+
+        foodEmbed
+          .setColor('#e67e22')
+          .setTitle(food[rand].name)
+          .setDescription(`${food[rand].price} €`)
+          .setThumbnail(food[rand].img)
+        
+        message.channel.sendMessage(foodEmbed);
       }
     })
   },
   
-  break: () => {
+  break: (bot) => {
     bot.on('message', message => {
       var d = new Date();
       if (message.content.toLowerCase() == 'break') {

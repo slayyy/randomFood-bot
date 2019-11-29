@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
+
 const food = require('./food.js');
 const words = require('./words.js');
 
@@ -16,6 +17,7 @@ bot.on("ready", () => {
   })
 })
 
-words.food;
-words.break;
+const foodEmbed = new Discord.RichEmbed();
 
+words.food(bot, food, foodEmbed);
+words.break(bot)
