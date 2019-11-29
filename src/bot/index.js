@@ -14,7 +14,7 @@ bot.on('message', message => {
 })
 
 bot.on('ready', () => {
-  bot.user.setPresence({game: {name: 'Random meal for you (:'}})
+  bot.user.setPresence({game: 'WATCHING', {name: 'Random meal for you (:'}})
 })
 
 
