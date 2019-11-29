@@ -4,7 +4,7 @@ const food = require('./food.js');
 
 const token = process.env.TOKEN;
 
-
+bot.login(token);
 
 bot.on('message', message => {
   if(message.content.toLowerCase() == 'food') {
@@ -16,8 +16,6 @@ bot.on('message', message => {
 bot.on('ready', () => {
   bot.user.setPresence({game: {name: 'Random meal for you (:'}})
 })
-
-bot.login(token);
 
 
 bot.on('message', message => { 
