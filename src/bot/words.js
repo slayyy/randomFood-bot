@@ -22,7 +22,7 @@ module.exports = {
         if (d.getDay() === 0 || d.getDay() === 6) {
           message.channel.sendMessage("Non, mais c'est le weekend :partying_face:")
         } else {
-          if (d.getHours() === 10 && d.getMinutes() >= 30 && d.getMinutes() < 45) {
+          if (d.getHours() === 10 && d.getMinutes() >= 30 && d.getMinutes() < 45 || d.getHours() === 14 && d.getMinutes() >= 30 && d.getMinutes() < 45) {
             message.channel.sendMessage("C'est la pause!! :sunglasses:")
           } else {
             message.channel.sendMessage("non :cry:")
